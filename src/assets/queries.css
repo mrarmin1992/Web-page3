@@ -1,0 +1,175 @@
+/* ----------------------------   */
+/*    From 1280 to1366 px         */
+/* ----------------------------   */
+
+@media only screen and (max-width: 1366px) {
+
+  .social-header a{padding-right: 25px;}
+}
+
+/* ----------------------------   */
+/*    From 1023 to 1280 px        */
+/* ----------------------------   */
+
+@media only screen and (max-width: 1280px) {
+  .pg-1 { font-size: 90%;}
+  a span { font-size: 90%; }
+  h3 { font-size: 150%; }
+  h5 {  font-size: 110%; }
+  .slide-title { font-size: 220%; }
+  .outline >.title-1{font-size: 90%;}
+  .sub-tit-1 {font-size: 75%;}
+  .section_bottom {font-size: 85%;}
+  footer ul li {font-size: 85%;}
+}
+
+/* ----------------------------   */
+/*    From 767  to 1023 px        */
+/* ----------------------------   */
+
+@media only screen and (max-width: 1023px) {
+  .social-header a{padding-right: 15px;}
+  .sub_nav-l {padding-left: 70px;}
+  .sub_nav-l  a:link {font-size: 100%;}
+  h1 {font-size: 250%; }
+  h3 { font-size: 120%; }
+  h5 {  font-size: 100%; }
+  .main-text-box > .pg-1{ font-size: 95%;}
+  .title-1{font-size: 100%;}
+  .sub-tit-1 {font-size: 70%;}
+  .message-1 {font-size: 280%;}
+  .message-2 {font-size: 95%;}
+  .slide-image {width: 100%;}
+  .slide-title {font-size: 200%;}
+  .slide-subtitle {font-size: 100%;}
+  .slide-subtitle-1 {font-size: 100%;}
+  .slider-link {font-size: 90%;}
+  .section-partners a img{height: 60px;}
+}
+
+/* ----------------------------   */
+/*      From 480 to 767 px        */
+/* ----------------------------   */
+
+@media only screen and (max-width: 767px) {
+
+  /*       Components       */
+  /* ---------------------- */
+  .box25 {width: 100%;}
+  .box50 {width: 100%;}
+  .pg-1 { font-size: 85%;}
+  a span {font-size: 100%;}
+
+  /*       Navigation       */
+  /* ---------------------- */
+  .full_nav{ display: none;}
+  .main-text-box {width: 80%;  }
+
+  /*       Header Box       */
+  /* ---------------------- */
+  /*header {background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0) 80% ), url(img/bdit_bg1.jpg)}*/
+
+  /*       Section 1        */
+  /* ---------------------- */
+
+  /*       Section 2        */
+  /* ---------------------- */
+  .section-top_stories .box-1 {height: 100px;}
+
+
+
+  /*       Section 3        */
+  /* ---------------------- */
+  .section-ecosystem .box-1 {height: 100px;}
+
+  /*       Section 4        */
+  /* ---------------------- */
+
+  /*       Section 5        */
+  /* ---------------------- */
+  .services-box {height: auto;}
+  .services-box .box-1 {height: 100px; background-color: #177581;}
+  .service i{display: block;font-size: 280%;}
+  .title-1{font-size: 130%;}
+  .sub-tit-1 {font-size: 80%;}
+
+  /*       Section 6        */
+  /* ---------------------- */
+
+  .slideshow-container {height: auto;}
+  .subcontainer_left {height: 250px;}
+  .slide-container {display: block; }
+  .slide-title {font-size: 130%; padding: 10px 10px 10px 20px;height: 80px;}
+  .slide-subtitle-up {font-size: 80%; padding: 10px 10px 10px 20px;}
+  .slide-subtitle { font-size: 80%; padding: 30px 10px 20px 20px; margin-bottom: 20px;}
+  .slider-link {margin-left: 20px;}
+  .slide-image {float: left;}
+  .prev, .next {cursor: pointer;position: absolute;top: 50%;}
+  .dot-style {position: relative;top: 340px;margin-left: 20px;}
+  .dot {height: 7px; width: 7px; margin: 0 1px;}
+
+  /*       Section 7        */
+  /* ---------------------- */
+
+  .section-partners .box-1 {height: 100px;}
+
+  /*       Section 8        */
+  /* ---------------------- */
+
+  .section_bottom .box25 {width: 25%;background: #dddddd}
+  .section_bottom .box25 {height: auto;font-size: 90%;}
+
+  /*        Footer          */
+  /* ---------------------- */
+
+}
+
+
+/* small phones from 0 to 480 px */
+@media only screen and (max-width: 480px) {
+
+  .responsive-menu-container { width: 100%; }
+
+
+
+  /*       Section 7        */
+  /* ---------------------- */
+  .message-1 {
+      font-family: Roboto Slab;
+      font-size: 200%;
+      font-weight: lighter;
+      padding-top: 80px;
+      padding-bottom: 30px;
+      text-align: center;
+      letter-spacing: 2px;
+  }
+  .message-2, .message-3 {
+      text-align: center;
+      padding-bottom: 30px;
+  }
+  .message-2 {
+      font-size: 90%;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      letter-spacing: 2px;
+  }
+
+
+  /*       Section 7        */
+  /* ---------------------- */
+
+  /*       Section 8        */
+  /* ---------------------- */
+  .section_bottom {height: auto;}
+  .section_bottom .box25 {width: 100%;font-size: 100%;}
+  .section_bottom .box25 {height: auto;}
+
+  footer ul li {width: 200px; display: block; float: none;}
+  footer a {color: #000}
+
+  .footer-eu {padding-right: 20px; background: #e2e2e2;display: block; padding-bottom: 20px; padding-top: 100px; clear: both}
+}
+
+/*        Footer          */
+/* ---------------------- */
+

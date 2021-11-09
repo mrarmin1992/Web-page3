@@ -1,0 +1,90 @@
+<h1 class="text-center text-secondary">Vijesti</h1>
+<div  class="row-fluid mb-2">
+  <button routerLink="/dashboard" style="background-color:transparent;top: 0;" class="btn btn-light"><i class="fa fa-lg fa-arrow-left text-secondary"></i></button>
+  <div class="row mt-2 effect8">
+    <div class="col-lg-3 mt-1">
+      <a class="btn btn-secondary" routerLink="/dashboard/nova-vijest" ><i class="fa fa-plus"></i></a>
+    </div>
+    <div class="form-inline col-lg-3 ">
+      <label for="kate" class="mr-1">Kategorije</label>
+      <select [(ngModel)]="selected" name="kate" (change)="onChange()" class="form-control">
+        <option [selected] value="Sve vijesti"> Sve vijesti</option>
+        <option *ngFor="let kat of kategorije" [value]="kat.Naziv">{{kat.Naziv}}</option>
+      </select>
+    </div>
+    <div class="col-lg-3"></div>
+
+    <div class="form-group col-lg-3">
+      <form class="form-inline mt-2">
+        <div class="input-group">
+          <label for="pretraga" class="mr-1">Pretraga</label>
+          <input class="form-control mr-1" type="text" name="pretraga" id="pretraga" [(ngModel)]="pretraga" >
+          <span class="input-group-btn mr-1">
+            <button class="btn btn-danger" (click)="pretraga = '';pretrazi()" type="button">
+              <i class="fa fa-times"></i>
+            </button>
+          </span>
+          <span class="input-group-btn">
+            <button class="btn btn-primary" (click)="pretrazi()" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <!--<table class="table table-striped table-hover table-responsive table-bordered w-100 d-block d-md-table">
+    <thead>
+      <tr>
+        <th>Naslov</th>
+        <th>Datum objave</th>
+        <th>Kategorija</th>
+        <th>Sadržaj</th>
+        <th>Podnaslov</th>
+        <th>Akcija</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vijest of vijesti">
+        <td>{{vijest.Naslov}}</td>
+        <td>{{ vijest.Datum.seconds*1000 | date:'dd-MM-yyy' }}</td>
+        <td>{{vijest.Kategorija}}</td>
+        <td [innerHTML]=vijest.Sadrzaj></td>
+        <td>{{vijest.Podnaslov}}</td>
+        <td><div class="btn-group"><a routerLink="/dashboard/izmjena-vijest/{{vijest.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(vijest)" class="mr-2 btn"><i class="fa fa-2x fa-trash"></i></a><a routerLink="/vijest/{{vijest.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-expand"></i></a></div></td>
+      </tr>
+    </tbody>
+  </table>-->
+<ngx-datatable class="material" [rows]="vijesti" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+  [rowHeight]="80" [scrollbarV]="false" [sorts]="[{prop: 'Naslov', dir: 'asc'}]">
+
+  <ngx-datatable-column name="Naslov" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Naslov}}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Datum objave" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Datum | date:'dd-MM-yyy'}}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Kategorija" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Kategorija}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Podnaslov" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Podnaslov}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Akcija" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <div class="btn-group"><a routerLink="/dashboard/izmjena-vijest/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="mr-2 btn"><i class="fa fa-2x fa-trash"></i></a><a routerLink="/vijest/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-expand"></i></a></div>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>

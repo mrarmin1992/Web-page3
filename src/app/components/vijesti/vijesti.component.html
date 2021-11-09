@@ -1,0 +1,152 @@
+  <h3 class="text-center">Posljednje vijesti</h3>
+
+  <section class="section first-section">
+    <div class="container-fluid vijestiContainer">
+        <div class="masonry-blog clearfix">
+            <div class="left-side">
+                <div class="masonry-box post-media">
+                     <img [src]="vijesti[0].Slika | async" alt="" class="prviRed">
+                     <div class="shadoweffect">
+                        <div class="shadow-desc">
+                            <div class="blog-meta">
+                              <span class="bg-green"><a title="">{{vijesti[0].Kategorija}}</a></span>
+                              <h4><a style="color: white !important" routerLink="/vijest/{{vijesti[0].Id}}" class="naslov" title="">{{vijesti[0].Naslov}}</a></h4>
+                              <small><a style="color: white !important" class="naslov" title="">{{vijesti[0].Datum | date }}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end shadow-desc -->
+                    </div><!-- end shadow -->
+                </div><!-- end post-media -->
+            </div><!-- end left-side -->
+
+            <div class="center-side">
+                <div class="masonry-box post-media">
+                     <img [src]="vijesti[1].Slika | async" alt="" class="prviRed">
+                     <div class="shadoweffect">
+                        <div class="shadow-desc">
+                            <div class="blog-meta">
+                                <span class="bg-green"><a title="">{{vijesti[1].Kategorija}}</a></span>
+                                <h4><a style="color: white !important" routerLink="/vijest/{{vijesti[1].Id}}" class="naslov" title="">{{vijesti[1].Naslov}}</a></h4>
+                                <small><a style="color: white !important" class="naslov" title="">{{vijesti[1].Datum | date }}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end shadow-desc -->
+                    </div><!-- end shadow -->
+                </div><!-- end post-media -->
+            </div><!-- end left-side -->
+
+            <div class="right-side hidden-md-down">
+                <div class="masonry-box post-media">
+                     <img [src]="vijesti[2].Slika | async" alt="" class="prviRed">
+                     <div class="shadoweffect">
+                        <div class="shadow-desc">
+                            <div class="blog-meta">
+                              <span class="bg-green"><a title="">{{vijesti[2].Kategorija}}</a></span>
+                              <h4><a style="color: white !important" routerLink="/vijest/{{vijesti[1].Id}}" class="naslov" title="">{{vijesti[2].Naslov}}</a></h4>
+                              <small><a style="color: white !important" class="naslov" title="">{{vijesti[2].Datum | date }}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end shadow-desc -->
+                     </div><!-- end shadow -->
+                </div><!-- end post-media -->
+            </div><!-- end right-side -->
+        </div><!-- end masonry -->
+    </div>
+</section>
+
+<section class="section first-section">
+  <div class="container-fluid vijestiContainer">
+      <div class="masonry-blog clearfix">
+        <div class="universal">
+          <div class="masonry-box small-box post-media">
+            <img [src]="vijesti[3].Slika | async" alt="" class="drugiRed">
+            <div class="">
+               <div class="shadow-desc">
+                   <div class="blog-meta">
+                   </div><!-- end meta -->
+               </div><!-- end shadow-desc -->
+           </div><!-- end shadow -->
+              <span class="spanDrugi" ><a title="">{{vijesti[3].Kategorija}}</a></span>
+              <h6 class="naslovDrugi"><a routerLink="/vijest/{{vijesti[3].Id}}" title="">{{vijesti[3].Naslov}}</a></h6>
+              <small><a class="naslov" title="">{{vijesti[3].Datum | date }}</a></small>
+          </div><!-- end post-media -->
+        </div> <!--end universal-->
+        <div class="universal">
+          <div class="masonry-box small-box post-media">
+            <img [src]="vijesti[4].Slika | async" alt="" class="drugiRed">
+            <div class="">
+              <div class="shadow-desc">
+                <div class="blog-meta">
+                </div><!-- end meta -->
+              </div><!-- end shadow-desc -->
+            </div><!-- end shadow -->
+              <span class="spanDrugi"><a title="">{{vijesti[4].Kategorija}}</a></span>
+              <h6 class="naslovDrugi"><a routerLink="/vijest/{{vijesti[4].Id}}" class="naslov" title="">{{vijesti[4].Naslov}}</a></h6>
+              <small><a class="naslov" title="">{{vijesti[4].Datum | date }}</a></small>
+          </div><!-- end post-media -->
+        </div> <!--end universal-->
+        <div class="universal">
+          <div class="masonry-box small-box post-media">
+            <img [src]="vijesti[5].Slika | async" alt="" class="drugiRed">
+            <div class="">
+              <div class="shadow-desc">
+                <div class="blog-meta">
+                </div><!-- end meta -->
+              </div><!-- end shadow-desc -->
+            </div><!-- end shadow -->
+            <span class="spanDrugi"><a title="">{{vijesti[5].Kategorija}}</a></span>
+            <h6 class="naslovDrugi"><a routerLink="/vijest/{{vijesti[5].Id}}" class="naslov" title="">{{vijesti[5].Naslov}}</a></h6>
+            <small><a class="naslov" title="">{{vijesti[5].Datum | date }}</a></small>
+          </div><!-- end post-media -->
+        </div> <!--end universal-->
+        <div class="universal">
+          <div class="masonry-box small-box post-media">
+            <img [src]="vijesti[6].Slika | async" alt="" class="drugiRed">
+            <div class="">
+              <div class="shadow-desc">
+                <div class="blog-meta">
+                </div><!-- end meta -->
+              </div><!-- end shadow-desc -->
+            </div><!-- end shadow -->
+            <span class="spanDrugi"><a title="">{{vijesti[6].Kategorija}}</a></span>
+            <h6 class="naslovDrugi"><a routerLink="/vijest/{{vijesti[6].Id}}" class="naslov" title="">{{vijesti[6].Naslov}}</a></h6>
+            <small><a class="naslov" title="">{{vijesti[6].Datum | date }}</a></small>
+          </div><!-- end post-media -->
+        </div> <!--end universal-->
+      </div><!-- end masonry-blog -->
+  </div><!-- end container-fluid -->
+</section>
+
+<section>
+  <h3 class="text-center mt-5">Događaji</h3>
+  <div class="container-fluid vijestiContainer">
+    <div class="masonry-blog clearfix">
+      <div class="universal-big">
+        <div class="masonry-box post-media">
+          <img [src]="dogadjaji[0].Slika | async" alt="" class="dogadjaj">
+          <div class="shadoweffect">
+            <div class="shadow-desc">
+              <div class="blog-meta">
+                <span class="bg-aqua"><a title="">{{dogadjaji[0].Kategorija}}</a></span>
+                <h4><a style="color: white !important" routerLink="/dogadjaj/{{dogadjaji[0].Id}}" class="naslov" title="">{{dogadjaji[0].Naslov}}</a></h4>
+                <small><a style="color: white !important" class="naslov" title="">{{dogadjaji[0].DatumPocetka | date }}</a></small>
+              </div><!-- end meta -->
+            </div><!-- end shadow-desc -->
+          </div><!-- end shadow -->
+        </div><!-- end post-media -->
+      </div><!--end universal-->
+      <div class="universal-big">
+        <div class="masonry-box post-media">
+          <img [src]="dogadjaji[1].Slika | async" alt="" class="dogadjaj">
+          <div class="shadoweffect">
+            <div class="shadow-desc">
+              <div class="blog-meta">
+                <span class="bg-aqua"><a title="">{{dogadjaji[1].Kategorija}}</a></span>
+                <h4><a style="color: white !important" routerLink="/dogadjaj/{{dogadjaji[1].Id}}" class="naslov" title="">{{dogadjaji[1].Naslov}}</a></h4>
+                <small><a style="color: white !important" class="naslov" title="">{{dogadjaji[1].DatumPocetka | date }}</a></small>
+              </div><!-- end meta -->
+            </div><!-- end shadow-desc -->
+          </div><!-- end shadow -->
+        </div><!-- end post-media -->
+      </div><!--end universal-->
+    </div><!-- end of masonry-blog -->
+    </div><!--end of container-fluid-->
+  </section>
+

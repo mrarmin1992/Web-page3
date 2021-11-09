@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+  <ul class="navbar-nav ml-auto" >
+    <li class="nav-item dropdown no-arrow mx-1">
+      <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-shopping-cart fa-fw"></i>
+        <span class="badge badge-danger badge-counter"></span>
+      </a>
+      <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+        <h6 class="dropdown-header" >
+        </h6>
+      </div>
+    </li>
+    <li class="nav-item dropdown no-arrow mx-1">
+      <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-bell fa-fw"></i>
+        <span class="badge badge-danger badge-counter"></span>
+      </a>
+      <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+        <h6 class="dropdown-header" >
+          New Reservations
+        </h6>
+        <a class="dropdown-item text-center small text-gray-500" routerLink="/reservations">See all reservations</a>
+      </div>
+    </li>
+
+    <div class="topbar-divider d-none d-sm-block"></div>
+    <li class="nav-item dropdown no-arrow">
+      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Welcome,</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+          <button class="dropdown-item btn btn-white" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Password reset</button>
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+          Settings (not impl)
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" (click)="onLogoutClick()" data-toggle="modal" data-target="#logoutModal">
+          <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+          Logout
+        </a>
+      </div>
+    </li>
+
+  </ul>
+</nav>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Password reset request</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="email">Enter your email address</label>
+          <input type="email" name="email" [(ngModel)]="email" class="form-control" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click)="resetPassword()" data-dismiss="modal" class="btn btn-primary">Send request</button>
+      </div>
+    </div>
+  </div>
+</div>

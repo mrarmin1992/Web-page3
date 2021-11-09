@@ -1,0 +1,41 @@
+.ukljucise {
+  padding-top: 78px;
+  height: 100%;
+  background-color: #ffffff;
+  margin-bottom: 5%;
+}
+img {
+ height: 92vh;
+ max-height: 92vh;
+ overflow: hidden;
+}
+.carousel-caption {
+  bottom: 20% !important;
+  right: 60%;
+  width: 30%;
+}
+
+.ukljuciseDugme{
+
+    background-color: #57832b;
+      border: none;
+      padding: 10px;
+    width: 200px;
+    border-radius:5px;
+      color: #fff;
+    margin-top: 30px;
+        margin-bottom: 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    }
+
+
+.carousel {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.carousel h3{
+  font-size: 45px;
+
+}

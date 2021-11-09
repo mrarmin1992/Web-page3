@@ -1,0 +1,42 @@
+.vijesti {
+  padding-top: 35px;
+}
+.vijestiContainer {
+  padding: 0 10%;
+}
+.prviRed {
+height: 310px !important;
+}
+.drugiRed {
+height: 200px;
+}
+a {
+  color: black !important;
+}
+h4 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.datum {
+  padding-left: 20px;
+}
+img {
+  object-fit: cover;
+}
+.naslovDrugi {
+  padding: 0px 0px !important;
+}
+.spanDrugi {
+    background-color: #e9e5e5;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 0.1rem 1rem;
+}
+h6 {
+  margin-bottom: 4px !important;
+}
+.dogadjaj {
+  height: 370px;
+}

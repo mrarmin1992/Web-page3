@@ -1,0 +1,38 @@
+.pozadina {
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+.container {
+  background-color: white;
+
+}
+.img-center{display:block; margin-left:auto; margin-right:auto; text-align:center}
+.content_bottom{
+  display:block;
+}
+.content_bottom_left{background-color:#fff; display:inline; margin-left:-15px; min-height:300px; padding-right:25px}
+.single_page_area{display:inline; padding-top:15px; padding-bottom:25px}
+.similar_post{background-color:#fff; display:inline-block; margin-bottom:20px; padding:0 15px; width:100%}
+
+.slicno {
+  height: 230px !important;
+  object-fit: fill;
+}
+.nedavne {
+
+}
+.nedavne {
+  margin-top: 200px;
+}
+hr {
+  margin-bottom: 0px !important;
+}
+.lista {
+  padding-top: 10px;
+}
+a:hover {
+  cursor:pointer;
+ }
+a {
+  color: black !important;
+}

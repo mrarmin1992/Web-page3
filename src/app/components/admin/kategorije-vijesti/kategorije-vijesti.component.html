@@ -1,0 +1,31 @@
+<h1 class="text-center text-secondary">Kategorije vijesti</h1>
+ <a class="btn btn-secondary mb-3" routerLink="/dashboard/nova-kategorija-vijesti" ><i class="fa fa-plus"></i></a>
+  <!--<table class="table table-striped table-hover table-responsive table-bordered w-100 d-block d-md-table">
+    <thead>
+      <tr>
+        <th>Naziv</th>
+        <th>Akcija</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let kategorija of kategorijeVijesti">
+        <td>{{kategorija.Naziv}}</td>
+        <td><div class="btn-group"><a routerLink="/dashboard/izmjena-kategorija-vijest/{{kategorija.Id}}" class="btn btn-light mr-2 inline">Edit</a><a (click)="onDeleteClick(kategorija)" class="btn btn-secondary text-white inline">Delete</a></div></td>
+      </tr>
+    </tbody>
+  </table>-->
+  <ngx-datatable class="material" [rows]="kategorijeVijesti" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+  [rowHeight]="80" [scrollbarV]="false" [sorts]="[{prop: 'Naslov', dir: 'asc'}]">
+
+  <ngx-datatable-column name="Naslov" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Naziv}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Akcija" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <div class="btn-group"><a routerLink="/dashboard/izmjena-kategorija-vijest/{{row.Id}}" class="btn mr-2 inline"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="btn inline"><i class="fa fa-2x fa-trash"></i></a></div>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>

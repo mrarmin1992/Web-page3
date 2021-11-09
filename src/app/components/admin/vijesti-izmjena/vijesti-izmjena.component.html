@@ -1,0 +1,117 @@
+<h1 class="text-center text-secondary">Izmjena vijesti</h1>
+<div  class="row-fluid">
+  <button routerLink="/dashboard/vijesti" style="background-color:transparent;top: 0;" class="btn btn-light"><i class="fa fa-lg fa-arrow-left text-secondary"></i></button>
+</div>
+<div class="container effect8 pt-3 pb-3 mb-5">
+  <form (ngSubmit)="onSubmit(rteForm)" #rteForm="ngForm">
+    <div class="form-group">
+      <label for="kategorija">Kategorija</label>
+      <select
+      #kategorija="ngModel"
+      [(ngModel)]="selectedObj"
+      class="form-control"
+      required
+      name="kategorije"
+      id="kategorija"
+      [ngClass]="{'is-invalid': kategorija.errors && kategorija.touched}">
+      <option *ngFor="let kat of kategorije" [selected]="kat.Naziv === selectedObj" [value]="kat.Naziv">
+        {{kat.Naziv}}
+      </option>
+      </select>
+      <div *ngIf="kategorija.invalid" class="invalid-feedback">
+        Kategorija vijesti je obavezna
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="datum">Datum objave</label>
+      <input
+        type="date"
+        #KursDatumPocetka="ngModel"
+        [ngClass]="{'is-invalid': KursDatumPocetka.errors && KursDatumPocetka.touched}"
+        [(ngModel)]="vijest.Datum"
+        name="datum"
+        id="datum"
+        class="form-control"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="naslov">Naslov</label>
+      <input
+        type="text"
+        #vijestNaslov="ngModel"
+        [ngClass]="{'is-invalid': vijestNaslov.errors && vijestNaslov.touched}"
+        [(ngModel)]="vijest.Naslov"
+        name="Naslov"
+        id="naslov"
+        class="form-control"
+        required>
+      <div [hidden]="!vijestNaslov.errors?.required" class="invalid-feedback">
+        Naslov vijesti je obavezan
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="podnaslov">Podnaslov</label>
+      <input
+        type="text"
+        #vijestPodnaslov="ngModel"
+        [ngClass]="{'is-invalid': vijestPodnaslov.errors && vijestPodnaslov.touched}"
+        [(ngModel)]="vijest.Podnaslov"
+        name="Podnaslov"
+        id="podnaslov"
+        class="form-control"
+        required>
+      <div [hidden]="!vijestPodnaslov.errors?.required" class="invalid-feedback">
+        Podnaslov vijesti je obavezan
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fokus">Fokus</label>
+      <br>
+      <label class="switch">
+        <input type="checkbox" (change)="checkValue(vijest.Id,vijest.Fokus)" name="fokus" [(ngModel)]="vijest.Fokus"
+        [ngModelOptions]="{standalone: true}">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="form-group">
+        <ejs-richtexteditor #fromRTE #name='ngModel' [(value)]='value' required name="name" [(ngModel)]="value"
+              (created)="rteCreated()"></ejs-richtexteditor>
+              <div *ngIf="(name.invalid && name.touched)" class="alert alert-danger">
+                  <div *ngIf="name.errors.required">
+                      Value is required.
+                  </div>
+              </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-6">
+          <label for="image">Select image</label>
+          <br />
+          <input class="btn btn-secondary"
+          #imageInput type="file"
+          id="image"
+          accept="image/*"
+          (change)="processFile(imageInput)"
+          [ngClass]="{'is-invalid': imageInput.errors && imageInput.touched}"
+          required/>
+          <div [hidden]="!imageInput.errors?.required" class="invalid-feedback">
+            Slika je obavezna
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div *ngIf="selectedFile" class="image-preview-container">
+            <div class="img-preview pull-right" [ngStyle]="{'background-image': 'url('+ selectedFile.src +')'}" style="width: 310px; height: 175px;">
+
+            </div>
+
+          </div>
+          <img *ngIf="!selectedFile" class="img-preview pull-right" [src]="vijest.Slika | async" width="310px" height="175px" alt="">
+        </div>
+      </div>
+
+    </div>
+    <input type="reset" value="Reset" class="btn btn-secondary mt-4">
+    <input type="submit" value="Spremi" class="btn btn-secondary pull-right mt-4">
+  </form>
+
+</div>

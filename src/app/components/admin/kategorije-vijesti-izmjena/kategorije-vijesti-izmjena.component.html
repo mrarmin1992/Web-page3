@@ -1,0 +1,25 @@
+<h1 class="text-center text-secondary">Izmjena kategorije vijesti</h1>
+<div  class="row-fluid">
+  <button routerLink="/dashboard/kategorije-vijesti" style="background-color:transparent;top: 0;" class="btn btn-light"><i class="fa fa-lg fa-arrow-left text-secondary"></i></button>
+</div>
+<div class="mt-5 effect8 pt-3 pb-3 pl-3">
+  <form #addForm="ngForm" (submit)="onSubmit(addForm)">
+    <div class="form-group">
+      <label for="naziv">Naziv</label>
+      <input
+        type="text"
+        #kategorijaNaziv="ngModel"
+        [ngClass]="{'is-invalid': kategorijaNaziv.errors && kategorijaNaziv.touched}"
+        [(ngModel)]="kategorija.Naziv"
+        name="Naziv"
+        id="naziv"
+        class="form-control"
+        required>
+      <div [hidden]="!kategorijaNaziv.errors?.required" class="invalid-feedback">
+        Naziv kategorije je obavezan
+      </div>
+    </div>
+    <input type="submit" value="Spremi" class="btn btn-secondary mt-4">
+  </form>
+</div>
+

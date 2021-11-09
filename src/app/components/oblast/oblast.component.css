@@ -1,0 +1,47 @@
+.oblastiBanner {
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 16%,rgba(41, 96, 168, 0) 90%), url(../../../assets/Slike/oblastibaner1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+    background-position: center center;
+
+  }
+  .oblasti{
+    padding-top: 260px;
+    padding-left: 130px;
+    font-size: 60px;
+    color:rgba(187, 53, 43, 0.671);
+    letter-spacing: 4px;
+  }
+  .aktSlika1 {
+    background: url('../../../assets/Slike/oblast2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .aktSlika2 {
+    background: url('../../../assets/Slike/oblast1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .aktSlika3 {
+    background: url('../../../assets/Slike/oblast3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .aktSlika4 {
+    background: url('../../../assets/Slike/oblast4.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .row {
+    background-color: rgba(248, 248, 248, 0.877);
+    height: auto;
+  }

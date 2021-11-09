@@ -1,0 +1,90 @@
+
+
+
+.slikepartneri{
+  display: block;
+  margin: 0 auto;
+  height: 85px;
+  width: auto;
+
+}
+.red{
+  padding: 0 110px;
+}
+
+.red2{
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #066399cc;
+  margin-top: 25px;
+  font-size: 14px;
+
+}
+.text{
+  text-align: justify;
+  padding: 40px 80px;
+}
+
+.plavi{
+  background:linear-gradient(rgba(22, 99, 214, 0.719), rgba(34, 104, 209, 0.712)), url("plavoslika1.jpg");
+  background-position:ctop;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  margin-top: 35px;
+  margin-bottom: 70px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.plavi p{
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+i{
+  display: block;
+  font-size: 70px;
+  text-align: center;
+  color: #fff;
+
+}
+.podnaslov{
+  margin-top: 20px;
+  display: block;
+  font-size: 27px;
+  color:rgba(31, 134, 134, 0.747);
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  font-weight: 100;
+  padding: 50px 0;
+}
+.vijestiBanner {
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 16%,rgba(41, 96, 168, 0) 90%), url(../../../assets/Slike/onama.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    
+  }
+  .vijest{
+    padding-top: 260px;
+    padding-left: 130px;
+    font-size: 60px;
+    color:rgba(38, 151, 151, 0.671);
+    letter-spacing: 4px;
+  }
+  .opis{
+    text-align: justify;
+    width: 70%;
+    margin-left: 15%;
+  }

@@ -1,0 +1,8 @@
+.img-preview-container {
+  background-color: #f7f7f7;
+  position: relative;
+}
+.img-preview {
+  background: center center no-repeat;
+  background-size: contain;
+}

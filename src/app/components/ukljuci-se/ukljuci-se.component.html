@@ -1,0 +1,59 @@
+<div class="ukljucise row">
+  <div id="carouselExampleIndicators" class="carousel slide col-lg-12" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li *ngFor="let kurs of aktivni; let i = index" data-target="#carouselExampleIndicators" data-slide-to="i" class="active mb-5"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div *ngFor="let kurs of aktivni; let j = index" [class.active]="j == 0" class="carousel-item ">
+        <div class="">
+          <!--<div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-6">
+              <h1 class="text-center mt-5">{{kurs.Naslov}}</h1>
+              <p class="text-center" [innerHTML]="kurs.Opis"></p>
+              <br>
+              <hr>
+              <a class="btn" style="margin-left: 40%;">Prijavi se</a>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-6 mb-5">
+              <img class="" [src]="kurs.Slika | async" width="600px" height="500px" alt="i slide">
+            </div>
+          </div>-->
+          <div class="view">
+            <img class="d-block w-100 slikaUkljuci" [src]="kurs.Slika | async" style="object-fit: cover; filter: brightness(50%); height: 100%;" alt="">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="ukljuciseNaslov">{{kurs.Naslov}}</h3>
+            <p class="ukljuciseOpis" [innerHTML]="kurs.Opis"></p>
+            <br>
+            <br>
+            <button *ngIf="kurs.Id !== undefined" routerLink="/prijava/{{kurs.Id}}/{{kurs.Naslov}}/{{kurs.Vrsta}}" class="btn prijava ukljuciseDugme">{{kurs.Dugme}}</button>
+            <button *ngIf="kurs.Id === undefined" routerLink="/o-nama" class="btn prijava ukljuciseDugme">{{kurs.Dugme}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>-->
+  </div>
+</div>
+<!--<div class="ukljucise row">
+  <div class="col-lg-6">
+    <h1 class="text-center mt-5">{{kursevi[0].Naslov}}</h1>
+    <p class="text-center">Text</p>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <a class="btn" style="margin-left: 45%;">Prijavi se</a>
+  </div>
+  <div class="col-lg-6">
+    <img class="" [src]="kursevi[0].Slika | async" width="500px" height="400px" alt="">
+  </div>
+</div>-->

@@ -1,0 +1,96 @@
+<section class="section wb pozadina">
+  <div class="container">
+      <div class="row pt-5">
+          <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+              <div class="page-wrapper">
+                  <div class="blog-title-area">
+                      <ol class="breadcrumb hidden-xs-down mb-5">
+                          <li class="breadcrumb-item"><a routerLink="">Početna</a></li>
+                          <li class="breadcrumb-item"><a routerLink="/usluge">Usluge</a></li>
+                          <li class="breadcrumb-item active">{{dogadjaj.Naslov}}</li>
+                      </ol>
+                      <!--<div class="fb-share-button" id="shareFB" data-layout="button" data-size="large"><a target="_blank" id="shareFBLink" class="fb-xfbml-parse-ignore">Dijeli</a></div>-->
+                      <h3>{{dogadjaj.Naslov}}</h3>
+                      <div class="post_commentbox"> <a><i class="fa fa-tags"></i>{{dogadjaj.Kategorija}}</a> </div>
+                      <div class="blog-meta big-meta">
+                      </div><!-- end meta -->
+                  </div><!-- end title -->
+
+                  <div class="single-post-media">
+                      <img [src]="dogadjaj.Slika | async" alt="" style="object-fit: cover;" class="img-fluid">
+                  </div><!-- end media -->
+
+                  <div class="blog-content">
+                      <div class="pp" [innerHTML]="dogadjaj.Opis">
+                      </div><!-- end pp -->
+                  </div><!-- end content -->
+
+                  <hr class="invis1">
+
+                  <div class="custombox clearfix">
+                      <h4 class="small-title mt-4">Slično</h4>
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <div class="blog-box">
+                                  <div class="post-media">
+                                      <a routerLink="/dogadjaj/{{slicno[0].Id}}" title="">
+                                          <img [src]="slicno[0].Slika | async" alt="" class="slicno">
+                                          <div class="hovereffect">
+                                              <span class=""></span>
+                                          </div><!-- end hover -->
+                                      </a>
+                                  </div><!-- end media -->
+                                  <div class="blog-meta">
+                                      <h4><a routerLink="/dogadjaj/{{slicno[0].Id}}" title="">{{slicno[0].Naslov}}</a></h4>
+                                      <small><a title="">{{slicno[0].Kategorija}}</a></small>
+                                      <small><a title="">{{slicno[0].DatumPocetka | date}}</a></small>
+                                  </div><!-- end meta -->
+                              </div><!-- end blog-box -->
+                          </div><!-- end col -->
+
+                          <div class="col-lg-6">
+                              <div class="blog-box">
+                                  <div class="post-media">
+                                      <a routerLink="/dogadjaj/{{slicno[1].Id}}" title="">
+                                          <img [src]="slicno[1].Slika | async" alt="" class="slicno">
+                                          <div class="hovereffect">
+                                              <span class=""></span>
+                                          </div><!-- end hover -->
+                                      </a>
+                                  </div><!-- end media -->
+                                  <div class="blog-meta">
+                                      <h4><a routerLink="/dogadjaj/{{slicno[1].Id}}" title="">{{slicno[1].Naslov}}</a></h4>
+                                      <small><a title="">{{slicno[1].Kategorija}}</a></small>
+                                      <small><a title="">{{slicno[1].DatumPocetka | date}}</a></small>
+                                  </div><!-- end meta -->
+                              </div><!-- end blog-box -->
+                          </div><!-- end col -->
+                      </div><!-- end row -->
+                  </div><!-- end custom-box -->
+
+                  <hr class="invis1">
+              </div><!-- end page-wrapper -->
+          </div><!-- end col -->
+
+          <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+              <div class="sidebar nedavne">
+                  <div class="widget">
+                      <h2 class="widget-title">Nedavni</h2>
+                      <hr>
+                      <div class="">
+                          <div class="">
+                              <a *ngFor="let index of [0,1,2,3,4,5,6,7,8,9]" routerLink="/dogadjaj/{{nedavno[index].Id}}" class="list-group-item-action flex-column align-items-start">
+                                  <div class="w-100 justify-content-between">
+                                      <h5>{{nedavno[index].Naslov}}</h5>
+                                      <small>{{nedavno[index].DatumPocetka | date}}</small>
+                                  </div>
+                                  <hr *ngIf="nedavno[index] !== undefined">
+                              </a>
+                          </div>
+                      </div><!-- end blog-list -->
+                  </div><!-- end widget -->
+              </div><!-- end sidebar -->
+          </div><!-- end col -->
+      </div><!-- end row -->
+  </div><!-- end container -->
+</section>

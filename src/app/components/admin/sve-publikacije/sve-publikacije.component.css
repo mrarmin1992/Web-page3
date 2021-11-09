@@ -1,0 +1,21 @@
+.btn-link:hover {
+  text-decoration: none;
+}
+.button:focus {
+  outline: none;
+  border: 0;
+}
+button{
+  border: 0;
+  outline: none;
+}
+.btn-link {
+  border: 0;
+  text-decoration: none;
+}
+.bs-example{
+  margin: 20px;
+}
+.accordion .fa{
+  margin-right: 0.5rem;
+}

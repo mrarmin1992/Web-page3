@@ -1,0 +1,69 @@
+<form (ngSubmit)="onSubmit(rteForm)" #rteForm="ngForm" class="effect8 pt-3 pb-3 mb-5 pl-3">
+  <div class="form-group">
+    <label for="naziv">Naslov</label>
+    <input
+      type="text"
+      #pubNaziv="ngModel"
+      [ngClass]="{'is-invalid': pubNaziv.errors && pubNaziv.touched}"
+      [(ngModel)]="pub.Naziv"
+      name="Naziv"
+      id="naziv"
+      class="form-control"
+      required>
+    <div [hidden]="!pubNaziv.errors?.required" class="invalid-feedback">
+      Naziv vijesti je obavezan
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="autor">Autor</label>
+    <input
+      type="text"
+      #pubAutor="ngModel"
+      [ngClass]="{'is-invalid': pubAutor.errors && pubAutor.touched}"
+      [(ngModel)]="pub.Autor"
+      name="Autor"
+      id="autor"
+      class="form-control"
+      required>
+    <div [hidden]="!pubAutor.errors?.required" class="invalid-feedback">
+      Autor vijesti je obavezan
+    </div>
+  </div>
+  <div class="form-group">
+      <ejs-richtexteditor #fromRTE #name='ngModel' [(value)]='value' required name="name" [(ngModel)]="value"
+            (created)="rteCreated()"></ejs-richtexteditor>
+            <div *ngIf="(name.invalid && name.touched)">
+                <div *ngIf="name.errors.required" class="alert alert-danger">
+                    Opis je obavezan
+                </div>
+            </div>
+  </div>
+  <input class="btn btn-primary" type="submit" value="Upload">
+</form>
+<div *ngIf="percentage | async as pct">
+
+  <progress class="progress is-info"
+            [value]="pct"
+            max="100">
+  </progress>
+
+  {{ pct | number }}%
+
+</div>
+
+<div *ngIf="(snapshot | async) as snap" class="mb-5">
+
+  {{ snap.bytesTransferred }} KB of {{ snap.totalBytes }} KB
+
+
+  <div *ngIf="downloadURL as url">
+    <h3>Results!</h3>
+    <a [href]="url" target="_blank" rel="noopener">{{file.name}}</a>
+  </div>
+<hr>
+
+<button (click)="task.pause()" class="btn btn-warning mr-2" [hidden]="!isActive(snap)">Pause</button>
+<button (click)="task.cancel()" class="btn btn-danger mr-2" [hidden]="!isActive(snap)">Cancel</button>
+<button (click)="task.resume()" class="btn btn-info"   [hidden]="!(snap?.state === 'paused')">Resume</button>
+</div>
+

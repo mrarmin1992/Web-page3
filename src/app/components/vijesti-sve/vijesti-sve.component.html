@@ -1,0 +1,66 @@
+<div class="vijestiBanner">
+  <p class="vijest naslovBaner">Vijesti</p>
+
+
+</div>
+<div class="container vijesti">
+  <div class="row red">
+    <!--<div class="col-lg-12">
+        <div *ngFor="let item of pageOfItems" class="blog-list clearfix">
+            <div class="blog-box row">
+                <div class="col-md-4">
+                    <div class="post-media">
+                        <a routerLink="/vijest/{{item.Id}}" title="">
+                            <img [src]="item.Slika | async" alt="" class="">
+                            <div class="hovereffect"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-meta big-meta col-md-8">
+                    <h4><a routerLink="/vijest/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
+                    <p>{{item.Podnaslov}}</p>
+                    <small><a title="">{{item.Kategorija}}</a></small>
+                    <small><a title="">{{item.Datum.seconds*1000 | date}}</a></small>
+                </div>
+            </div>
+            <hr class="invis">
+
+        </div>
+        <hr class="invis">
+
+    </div>-->
+    <div class="game-container ml-5">
+      <div class="grid-container">
+        <div *ngFor="let item of pageOfItems" class="grid-cell">
+          <span>
+            <a routerLink="/vijest/{{item.Id}}" title="">
+                <img [src]="item.Slika | async" alt="" class="">
+            </a>
+            <span class="proba">
+              <h4><a routerLink="/vijest/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
+
+            <small>{{item.Kategorija}}, <b>{{item.Datum | date}}</b></small>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pb-0 pt-3" style="margin-bottom: 100px;">
+    <jw-pagination [pageSize]="pageSize" [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+</div>
+</div>
+<!--
+<div class="red">
+  <div class="card text-center m-3">
+    <h3 class="card-header">Angular 8 Pagination Example</h3>
+    <div class="card-body">
+        <div *ngFor="let item of pageOfItems">{{item.Naslov}}</div>
+    </div>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+  </div>
+</div>
+-->

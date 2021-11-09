@@ -1,0 +1,10 @@
+.pozadina {
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+.container {
+  background-color: white;
+}
+p {
+  display: inline;
+}

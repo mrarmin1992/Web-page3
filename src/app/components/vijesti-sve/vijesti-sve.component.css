@@ -1,0 +1,47 @@
+.red {
+  padding-top: 100px;
+}
+h4 {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+img {
+  height: 200px !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: black !important;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  grid-gap: 20px;
+}
+
+.grid-cell {
+  border: solid whitesmoke;
+  height: auto;
+  border-radius: 3px;
+  text-align: right, bottom;
+}
+
+.mojDiv {
+  padding-left: 5% !important;
+}
+.vijestiBanner {
+background-image: linear-gradient(to right, rgb(255, 255, 255) 16%,rgba(41, 96, 168, 0) 90%), url(../../../assets/Slike/vestibaner.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+  background-position: center;
+
+}
+.vijest{
+  padding-top: 260px;
+  padding-left: 130px;
+  font-size: 60px;
+  color:rgba(61, 140, 177, 0.637);
+  letter-spacing: 8px;
+}

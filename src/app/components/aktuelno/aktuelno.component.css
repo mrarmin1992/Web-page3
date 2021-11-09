@@ -1,0 +1,22 @@
+.aktSlika {
+  background: url('../../../assets/Slike/iot2.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.row {
+  background-color: rgba(248, 248, 248, 0.877);
+  height: auto;
+}
+
+.iotSlika {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: url('../../../assets/Slike/iStock-963146570_0.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

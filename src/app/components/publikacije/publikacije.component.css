@@ -1,0 +1,49 @@
+.btn-link:hover {
+  text-decoration: none;
+}
+.button:focus {
+  outline: none;
+  border: 0;
+}
+button{
+  border: 0;
+  outline: none;
+}
+.btn-link {
+  border: 0;
+  text-decoration: none;
+}
+.bs-example{
+  margin: 20px;
+}
+.accordion .fa{
+  margin-right: 0.5rem;
+}
+
+.usluge {
+
+  height: 500px;
+  background: linear-gradient(to right, rgb(255, 255, 255) 8%,rgba(41, 96, 168, 0) 90%), url("../../../assets/Slike/banerpublikacije2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+.vijest{
+  padding-top: 260px;
+  padding-left: 130px;
+  font-size: 55px;
+  color:rgba(153, 88, 45, 0.726);
+  letter-spacing: 8px;
+}
+.publik {
+  min-height: 500px;
+}
+.btn-link {
+  color: rgba(153, 88, 45, 0.726);
+}
+.btn-secondary, .btn-primary {
+  background-color: rgba(153, 88, 45, 0.726) !important;
+  border-color: rgba(153, 88, 45, 0.726) !important;
+}

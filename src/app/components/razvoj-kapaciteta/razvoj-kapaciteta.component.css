@@ -1,0 +1,75 @@
+.razvojKapaciteta {
+  background-image:  url(../../../assets/Slike/biciklo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 800px;
+    background-position: center center;
+
+  }
+  .slikaRazvoj {
+    background-image: url(../../../assets/Slike/bicikla.jpg);
+    background-size: cover;
+    background-position: center center;
+
+  }
+  .razvoj{
+    padding-top: 460px;
+    padding-left: 130px;
+    font-size: 50px;
+    color:#e1e359;
+    letter-spacing: 4px;
+  }
+  .razvojPod {
+    width: 800px;
+    height: auto;
+    padding-left: 130px;
+    color:white;
+    letter-spacing: 1px;
+  }
+.naslovBaner {
+  padding-left: 60px !important;
+}
+.pruzaoci{
+  padding-top: 260px;
+  padding-left: 130px;
+  font-size: 60px;
+  color:rgba(187, 53, 43, 0.671);
+  letter-spacing: 4px;
+}
+.dugme {
+margin:0 auto;
+display:block;
+}
+.box1 {
+padding-top: 100px;
+padding-bottom: 100px;
+background-color: whitesmoke;
+padding-left: 200px;
+padding-right: 200px;
+}
+.box2 {
+padding-top: 170px;
+padding-bottom: 170px;
+padding-left: 100px;
+padding-right: 100px;
+}
+.pedinzi {
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.donji {
+padding-top: 50px;
+}
+.container-fluid {
+padding-left: 0px;
+padding-right: 0px;
+}
+.zadnji {
+
+min-height: 300px;
+height: auto;
+}
+.para {
+  padding-right: 200px;
+  padding-left: 200px;
+}

@@ -1,0 +1,139 @@
+<div class="container vijesti">
+  <div *ngIf="vijesti.length > 0">
+    <h1 class="naslovi">Vijesti</h1>
+    <div class="row red">
+      <div class="col-lg-12">
+          <div *ngFor="let item of vijesti" class="blog-list clearfix">
+              <div class="blog-box row">
+                  <div class="col-md-4">
+                      <div class="post-media">
+                          <a routerLink="/vijest/{{item.Id}}" title="">
+                              <img [src]="item.Slika | async" alt="" class="">
+                              <div class="hovereffect"></div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="blog-meta big-meta col-md-8">
+                      <h4><a routerLink="/vijest/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
+                      <p [innerHTML]="item.Sadrzaj"></p>
+                      <small><a title="">{{item.Kategorija}}</a></small>
+                      <small><a title="">{{item.Datum.seconds*1000 | date}}</a></small>
+                  </div>
+              </div>
+              <hr class="">
+
+          </div>
+          <hr class="invis">
+
+      </div>
+    </div>
+  </div>
+  <div *ngIf="kursevi.length > 0  ">
+    <h1 class="naslovi">Kursevi</h1>
+    <div class="row red">
+      <div class="col-lg-12">
+          <div *ngFor="let item of kursevi" class="blog-list clearfix">
+              <div class="blog-box row">
+                  <div class="col-md-4">
+                      <div class="post-media">
+                          <a routerLink="/kurs/{{item.Id}}/false" title="">
+                              <img [src]="item.Slika | async" alt="" class="">
+                              <div class="hovereffect"></div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="blog-meta big-meta col-md-8">
+                      <h4><a routerLink="/kurs/{{item.Id}}/false" title="">{{item.Naslov}}</a></h4>
+                      <p [innerHTML]="item.Opis"></p>
+                      <small><a title="">{{item.Kategorija}}</a></small>
+                      <small><a title="">{{item.DatumPocetka | date}}</a></small>
+                  </div>
+              </div>
+              <hr class="">
+
+          </div>
+          <hr class="invis">
+
+      </div>
+  </div>
+
+  </div>
+  <div *ngIf="obuke.length > 0">
+    <h1 class="naslovi">Praktične obuke</h1>
+    <div class="row red">
+      <div class="col-lg-12">
+          <div *ngFor="let item of obuke" class="blog-list clearfix">
+              <div class="blog-box row">
+                  <div class="col-md-4">
+                      <div class="post-media">
+                          <a routerLink="/kurs/{{item.Id}}/true" title="">
+                              <img [src]="item.Slika | async" alt="" class="">
+                              <div class="hovereffect"></div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="blog-meta big-meta col-md-8">
+                      <h4><a routerLink="/kurs/{{item.Id}}/true" title="">{{item.Naslov}}</a></h4>
+                      <p [innerHTML]="item.Opis"></p>
+                      <small><a title="">{{item.Kategorija}}</a></small>
+                      <small><a title="">{{item.DatumPocetka | date}}</a></small>
+                  </div>
+              </div>
+              <hr class="">
+
+          </div>
+          <hr class="invis">
+
+      </div>
+    </div>
+  </div>
+  <div *ngIf="dogadjaji.length > 0">
+    <h1 class="naslovi">Događaji</h1>
+    <div class="row red">
+      <div class="col-lg-12">
+          <div *ngFor="let item of dogadjaji" class="blog-list clearfix">
+              <div class="blog-box row">
+                  <div class="col-md-4">
+                      <div class="post-media">
+                          <a routerLink="/dogadjaj/{{item.Id}}" title="">
+                              <img [src]="item.Slika | async" alt="" class="">
+                              <div class="hovereffect"></div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="blog-meta big-meta col-md-8">
+                      <h4><a routerLink="/dogadjaj/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
+                      <p [innerHTML]="item.Opis"></p>
+                      <small><a title="">{{item.Kategorija}}</a></small>
+                      <small><a title="">{{item.DatumPocetka | date}}, {{item.VrijemePocetka}}</a></small>
+                  </div>
+              </div>
+              <hr class="">
+
+          </div>
+          <hr class="invis">
+
+      </div>
+    </div>
+  </div>
+  <div *ngIf="vijesti.length === 0 && kursevi.length === 0 && obuke.length === 0 && dogadjaji.length === 0">
+    <h1>Nije ništa pronađeno</h1>
+  </div>
+</div>
+<!--
+<div class="red">
+  <div class="card text-center m-3">
+    <h3 class="card-header">Angular 8 Pagination Example</h3>
+    <div class="card-body">
+        <div *ngFor="let item of pageOfItems">{{item.Naslov}}</div>
+    </div>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+  </div>
+</div>
+-->

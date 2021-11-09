@@ -1,0 +1,75 @@
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-front{
+  padding-top: 50px;
+}
+.flip-card-front h4
+ {
+  color: rgb(255, 255, 255);
+  padding-top: 50px;
+}
+.text-center{
+  color: #fff;
+  font-size: 30px;
+}
+.flip-card-back {
+  background-color: rgba(20, 78, 95, 0.678);
+  color: white;
+  transform: rotateY(180deg);
+  padding-top: 50px;
+  text-align: center;
+ 
+
+}
+
+.fa {
+  color: rgb(255, 255, 255);
+}
+.kontent {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  padding: 40px 0;
+}
+
+.plavi{
+  background:linear-gradient(rgba(22, 99, 214, 0.719), rgba(34, 104, 209, 0.712)), url(../../../assets/Slike/plavoslika1.jpg);
+  background-position:top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height:auto ;
+
+}
+.btn-secondary{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+Button {
+  background-color: #7bb342 !important;
+
+}

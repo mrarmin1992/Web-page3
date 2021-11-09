@@ -1,0 +1,78 @@
+<div class="korisniciUsluga">
+  <p class="korisnici">Želite unaprijediti vještine?</p>
+  <br>
+  <div class="razvojPod">
+    <p>
+      Partnerstvo za obrazovanje odraslih radi zajedno sa organizacijama i pojedincima na izgradnji vještina potrebnih u
+      svijetu koji se stalno mjenja.
+    </p>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="text-center mt-5">Mi vam možemo pomoći da se opremite potrebnim vještinama</h3>
+  <div class="container">
+    <p>Parnerstvo u oblasti obrazovanja odraslih je uspostavljeno kako bi vam pomogli u vašim nastojanjima da
+      učestvujete u šiirokom spektru formalnih i neformalnih aktivnosti učenja, kako generalnih tako i stručnih nakon
+      što ste završili vaše inicijalno obrazovanje i obuku</p>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row donji">
+    <div class="col-lg-4 box2" style="background-color: #737373">
+      <h4 class="text-center text-white" style="font-weight: 600;">KOGNITIVNE
+        VJEŠTINE
+      </h4>
+      <br>
+      <p class="text-center text-white"> Razvoj kognitivnih vještina uključuje pismenost i brojeve. Razvojem kognitivnih
+        vještina vi možete povećati svoje sposobnosti da razumijete kompleksne ideje, da se efikasno prilagodite
+        okruženju, naučite iz iskustva i razumjevanja.</p>
+      <br>
+    </div>
+    <div class="col-lg-4 box2" style="background-color: #066399ab;">
+      <h4 class="text-center text-white" style="font-weight: 600;">SOCIO-EMOCIONALNE VJEŠTINE</h4>
+      <p class="text-center text-white">Razvoj socio-emocionalnih vještina vam mogu pomoći da povećate svoje sposobnosti
+        efikasnog upravljanja u međuljudskim i socijalnim situacijama, uključujući vođenje, timski rad, samokontrolu i
+        čvrstinu.</p>
+    </div>
+    <div class="col-lg-4 box2" style="background-color: #57832bc2;">
+      <h4 class="text-center text-white" style="font-weight: 600;">TEHNIČKE
+        VJEŠTINE
+      </h4>
+      <br>
+      <p class="text-center text-white">Razvoj tehničkih vještina vam može pomoći da steknete znanje, stručnost i
+        interakcije potrebne za obavljanje određenog posla, uključujući znanja o materijalima, alatima i tehnologijama.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row predzadnji">
+  <div class="col-lg-12" style="padding-top: 60px;background-color: whitesmoke;">
+    <h3 style="color: #066399ab;">Pronađite obuku koji vam odgovara</h3>
+    <p class="">
+      Naše partnerstvo uključuje provajdere koji pružaju usluge organizovanja obuke prilagođene vašim potrebama.
+      Započnite sa obukom već danas!
+    </p>
+    <br>
+    <h3>Šta želite da naučite ?</h3>
+    <form (ngSubmit)="onSubmit(rteForm)" #rteForm="ngForm" class="form-inline">
+      <input required type="text" style="width: 100%; border: none;" name="pretraga" [(ngModel)]="pretraga"
+        class="form-control mr-3">
+      <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<div class="row zadnji">
+  <div class="col-lg-6" style="padding-top: 60px; padding-bottom: 60px; background-color: whitesmoke;">
+    <h3 style="color: #066399ab;">Saznaj koje su trenutno obuke u toku</h3>
+    <p class="">
+      Pogledaj nove kurseve, praktične obuke i događaje koji ti mogu pomoći da razviješ svoja znanja i vještine.
+    </p>
+    <a routerLink="/usluge" class="btn btn-primary dugme" style="border-radius:5px; width: 180px">Saznaj više</a>
+  </div>
+  <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" class="col-lg-6 slikaKorisnici ">
+
+  </div>
+</div>

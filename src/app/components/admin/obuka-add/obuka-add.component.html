@@ -1,0 +1,143 @@
+<h1 class="text-center text-secondary">Nova praktična obuka</h1>
+<div  class="row-fluid">
+  <button routerLink="/dashboard/obuke" style="background-color:transparent;top: 0;" class="btn btn-light"><i class="fa fa-lg fa-arrow-left text-secondary"></i></button>
+</div>
+<div class="container mb-5  effect8 pt-3 pb-3">
+  <form (ngSubmit)="onSubmit(rteForm)" #rteForm="ngForm">
+    <div class="form-group">
+      <label for="kategorija">Kategorija</label>
+      <select
+      #kategorija="ngModel"
+      [(ngModel)]="selectedObj"
+      class="form-control"
+      required
+      name="kategorije"
+      id="kategorija"
+      [ngClass]="{'is-invalid': (kategorija.errors || kategorija.value === 'Odaberite kategoriju') && kategorija.touched}">
+      <option value="Odaberite kategoriju">Odaberite kategoriju</option>
+      <option *ngFor="let kat of kategorije" [value]="kat.Naziv">
+        {{kat.Naziv}}
+      </option>
+      </select>
+      <div *ngIf="kategorija.invalid" class="invalid-feedback">
+        Kategorija kursa je obavezna
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="naslov">Naziv</label>
+      <input
+        type="text"
+        #kursNaslov="ngModel"
+        [ngClass]="{'is-invalid': kursNaslov.errors && kursNaslov.touched}"
+        [(ngModel)]="obuka.Naslov"
+        name="Naslov"
+        id="naslov"
+        class="form-control"
+        required>
+      <div [hidden]="!kursNaslov.errors?.required" class="invalid-feedback">
+        Naziv kursa je obavezan
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">Opis</label>
+      <ejs-richtexteditor #fromRTE #name='ngModel' [(value)]='value' required name="name" [(ngModel)]="value"
+            (created)="rteCreated()"></ejs-richtexteditor>
+            <div *ngIf="(name.invalid && name.touched)">
+                <div *ngIf="name.errors.required" class="alert alert-danger">
+                    Opis je obavezan
+                </div>
+            </div>
+  </div>
+    <div class="form-group">
+      <label for="datum">Datum početka</label>
+      <input
+        type="date"
+        #KursDatumPocetka="ngModel"
+        [ngClass]="{'is-invalid': KursDatumPocetka.errors && KursDatumPocetka.touched}"
+        [(ngModel)]="obuka.DatumPocetka"
+        name="datum"
+        id="datum"
+        class="form-control"
+        required>
+      <div [hidden]="!KursDatumPocetka.errors?.required" class="invalid-feedback">
+        Datum početka kursa je obavezan
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="trajanje">Trajanje (u sedmicama)</label>
+      <input
+        type="number"
+        #kursTrajanje="ngModel"
+        [ngClass]="{'is-invalid': kursTrajanje.errors && kursTrajanje.touched}"
+        [(ngModel)]="obuka.Trajanje"
+        name="trajanje"
+        id="trajanje"
+        class="form-control"
+        required>
+      <div [hidden]="!kursTrajanje.errors?.required" class="invalid-feedback">
+        Trajanje kursa je obavezno
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="brojPolaznika">Broj polaznika</label>
+      <input
+        type="number"
+        #kursPolaznici="ngModel"
+        [ngClass]="{'is-invalid': kursPolaznici.errors && kursPolaznici.touched}"
+        [(ngModel)]="obuka.BrojPolaznika"
+        name="brojPolaznika"
+        id="brojPolaznika"
+        class="form-control"
+        required>
+      <div [hidden]="!kursPolaznici.errors?.required" class="invalid-feedback">
+        Broj polaznika na kursu je obavezan
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cijena">Cijena (KM)</label>
+      <input
+        type="number"
+        #kursCijena="ngModel"
+        [ngClass]="{'is-invalid': kursCijena.errors && kursCijena.touched}"
+        [(ngModel)]="obuka.Cijena"
+        name="cijena"
+        id="cijena"
+        class="form-control"
+        required>
+      <div [hidden]="!kursCijena.errors?.required" class="invalid-feedback">
+        Cijena kursa je obavezna
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-6">
+          <label for="image">Select image</label>
+          <br />
+          <input class="btn btn-secondary"
+          #imageInput type="file"
+          name="Slika"
+          id="image"
+          accept="image/*"
+          (change)="processFile(imageInput)"
+          [ngClass]="{'is-invalid': imageInput.errors && imageInput.touched}"
+          required/>
+          <div [hidden]="!imageInput.errors?.required" class="invalid-feedback">
+            Slika je obavezna
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div *ngIf="selectedFile" class="image-preview-container">
+            <div class="img-preview pull-right" [ngStyle]="{'background-image': 'url('+ selectedFile.src +')'}" style="width: 310px; height: 175px;">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <input type="reset" value="Reset" class="btn btn-secondary mt-4">
+    <input type="submit" value="Dodaj praktičnu obuku" class="btn btn-secondary pull-right mt-4">
+  </form>
+
+</div>

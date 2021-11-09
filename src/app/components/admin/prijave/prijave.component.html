@@ -1,0 +1,68 @@
+<h1 class="text-center text-secondary">Prijave</h1>
+<div  class="row-fluid mb-4">
+  <button routerLink="/dashboard" style="background-color:transparent;top: 0;" class="btn btn-light"><i class="fa fa-lg fa-arrow-left text-secondary"></i></button>
+</div>
+<div class="row mt-2 effect8 pt-3 pb-3">
+  <div class="form-inline col-lg-3">
+    <label for="kate" class="mr-1">Događaji</label>
+    <select [(ngModel)]="selectedObj" name="kate" (change)="onChange()" class="form-control">
+      <option [selected] value="Svi događaji"> Svi događaji</option>
+      <option *ngFor="let event of events" [value]="event">{{event}}</option>
+    </select>
+  </div>
+  <div class="col-lg-3"></div>
+
+  <div class="form-group col-lg-3 pt-2">
+    <form class="form-inline">
+      <div class="input-group">
+        <label for="pretraga" class="mr-1">Pretraga</label>
+        <input class="form-control mr-1" type="text" name="pretraga" id="pretraga" [(ngModel)]="pretraga" >
+        <span class="input-group-btn mr-1">
+          <button class="btn btn-danger" (click)="pretraga = '';pretrazi()" type="button">
+            <i class="fa fa-times"></i>
+          </button>
+        </span>
+        <span class="input-group-btn">
+          <button class="btn btn-primary" (click)="pretrazi()" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="bs-example">
+  <div class="accordion" id="accordionExample">
+<div *ngFor="let prijava of prijave; let i = index" class="card effect8 pt-2 pb-2">
+  <div class="card-header" id="heading{{i}}">
+      <h3 class="mb-0">
+          <button type="button" class="btn-link" data-toggle="collapse" attr.data-target="#collapse{{i}}">{{prijava.Ime}} {{prijava.Prezime}}</button>
+      </h3>
+  </div>
+  <div id="collapse{{i}}" class="collapse" attr.aria-labelledby="heading{{i}}" data-parent="#accordionExample">
+      <div class="card-body">
+        <a (click)="delete(prijava)" class="mr-2 btn pull-right"><i class="fa fa-2x fa-trash"></i></a>
+        <span class="form-group">
+          <label for="pogledano">Pogledano</label>
+          <br>
+          <label class="switch">
+            <input type="checkbox" (change)="checkValue(prijava.Id,prijava.Pogledano)" name="pogledano" [(ngModel)]="prijava.Pogledano"
+            [ngModelOptions]="{standalone: true}">
+            <span class="slider round"></span>
+          </label>
+        </span>
+        <!--<a routerLink="/dashboard/izmjena-publikacija/{{prijava.Id}}"class="mr-2 btn pull-right"><i class="fa fa-2x fa-wrench"></i></a>-->
+        <p class="card-title"><b>Datum prijave: </b>{{prijava.DatumPrijave}}</p>
+        <p class="card-title"><b>Adresa: </b>{{prijava.Adresa}}</p>
+        <p class="card-title"><b>Datum rođenja: </b>{{prijava.DatumRodjenja}}</p>
+        <p class="card-title"><b>Telefon: </b>{{prijava.Telefon}}</p>
+        <p class="card-title"><b>Email: </b>{{prijava.Email}}</p>
+        <p class="card-title"><b>JMBG: </b>{{prijava.JMBG}}</p>
+        <p class="card-title"><b>Zanimanje: </b>{{prijava.Zanimanje}}</p>
+        <p class="card-title"><b>Prethodno znanje: </b>{{prijava.Znanje}}</p>
+        <p class="card-title"><b>Event: </b>{{prijava.EventNaziv}}</p>
+      </div>
+  </div>
+</div>
+  </div>
+</div>
